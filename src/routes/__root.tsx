@@ -9,6 +9,10 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { PageTransition } from "@/components/layout/PageTransition";
+import { useLenis } from "@/hooks/useLenis";
 
 function NotFoundComponent() {
   return (
@@ -113,7 +117,22 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <RootLayout />
     </QueryClientProvider>
+  );
+}
+
+function RootLayout() {
+  useLenis();
+  return (
+    <div className="min-h-screen bg-background text-foreground antialiased">
+      <Navbar />
+      <main className="relative">
+        <PageTransition>
+          <Outlet />
+        </PageTransition>
+      </main>
+      <Footer />
+    </div>
   );
 }
