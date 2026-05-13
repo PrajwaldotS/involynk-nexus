@@ -104,8 +104,12 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <div ref={contentRef} key={renderedPath} style={{ willChange: "transform, filter, opacity" }}>
-        {children}
+      <div
+        ref={contentRef}
+        className="relative"
+        style={{ willChange: "transform, filter, opacity" }}
+      >
+        <div key={renderedPath}>{children}</div>
       </div>
 
       <div
