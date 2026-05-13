@@ -118,13 +118,13 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
         className="fixed inset-0 z-[100] pointer-events-none"
       >
         <div className="absolute inset-0 flex">
-          <div ref={slab1} className="relative h-full w-1/3 bg-foreground" />
-          <div ref={slab2} className="relative h-full w-1/3 bg-foreground" />
-          <div ref={slab3} className="relative h-full w-1/3 bg-foreground" />
+          <div ref={slab1} className="relative h-full w-1/3 bg-foreground -translate-y-full" />
+          <div ref={slab2} className="relative h-full w-1/3 bg-foreground -translate-y-full" />
+          <div ref={slab3} className="relative h-full w-1/3 bg-foreground -translate-y-full" />
         </div>
         <div
           ref={labelRef}
-          className="absolute inset-0 flex items-center justify-center"
+          className="absolute inset-0 flex items-center justify-center opacity-0"
         >
           <div className="text-background font-display text-5xl sm:text-7xl md:text-8xl tracking-tight">
             <span className="opacity-60 mr-3 text-2xl sm:text-3xl align-middle">

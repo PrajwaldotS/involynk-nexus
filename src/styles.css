@@ -1,4 +1,4 @@
-@import "tailwindcss" source(none);
+@import "tailwindcss" ;
 @source "../src";
 @import "tw-animate-css";
 
@@ -176,7 +176,7 @@
 @utility noise {
   position: relative;
 }
-@utility noise::after {
+.noise::after {
   content: "";
   position: absolute;
   inset: 0;
