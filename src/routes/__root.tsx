@@ -9,6 +9,10 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { PageTransition } from "@/components/layout/PageTransition";
+import { useLenis } from "@/hooks/useLenis";
 
 function NotFoundComponent() {
   return (
@@ -119,11 +123,6 @@ function RootComponent() {
 }
 
 function RootLayout() {
-  // Lazy import to keep root file small
-  const { Navbar } = require("@/components/layout/Navbar") as typeof import("@/components/layout/Navbar");
-  const { Footer } = require("@/components/layout/Footer") as typeof import("@/components/layout/Footer");
-  const { PageTransition } = require("@/components/layout/PageTransition") as typeof import("@/components/layout/PageTransition");
-  const { useLenis } = require("@/hooks/useLenis") as typeof import("@/hooks/useLenis");
   useLenis();
   return (
     <div className="min-h-screen bg-background text-foreground antialiased">
