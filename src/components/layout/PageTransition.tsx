@@ -28,13 +28,14 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
       // Initial mount intro
       gsap.fromTo(
         contentRef.current,
-        { autoAlpha: 0, y: 24, filter: "blur(14px)" },
+        { opacity: 0, y: 24, filter: "blur(14px)" },
         {
-          autoAlpha: 1,
+          opacity: 1,
           y: 0,
           filter: "blur(0px)",
           duration: 1.1,
           ease: "expo.out",
+          clearProps: "transform,filter",
         }
       );
       return;
@@ -82,13 +83,14 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
       })
       .fromTo(
         contentRef.current,
-        { autoAlpha: 0, y: 36, filter: "blur(18px)" },
+        { opacity: 0, y: 36, filter: "blur(18px)" },
         {
-          autoAlpha: 1,
+          opacity: 1,
           y: 0,
           filter: "blur(0px)",
           duration: 1.0,
           ease: "expo.out",
+          clearProps: "transform,filter",
         },
         "-=0.7"
       )

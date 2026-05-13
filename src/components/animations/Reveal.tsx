@@ -36,14 +36,20 @@ export function SplitWords({
 }) {
   const words = text.split(" ");
   return (
-    <span className={className}>
+    <motion.span
+      className={className}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-10%" }}
+    >
       {words.map((w, i) => (
         <span key={i} className="inline-block overflow-hidden align-bottom mr-[0.25em]">
           <motion.span
             className="inline-block"
-            initial={{ y: "110%" }}
-            whileInView={{ y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
+            variants={{
+              hidden: { y: "110%" },
+              visible: { y: 0 },
+            }}
             transition={{
               duration: 1.0,
               delay: delay + i * 0.06,
@@ -54,6 +60,6 @@ export function SplitWords({
           </motion.span>
         </span>
       ))}
-    </span>
+    </motion.span>
   );
 }
