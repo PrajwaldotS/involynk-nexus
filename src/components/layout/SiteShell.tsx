@@ -1,18 +1,11 @@
 import type { ReactNode } from "react";
-import { Navbar } from "./Navbar";
-import { Footer } from "./Footer";
-import { PageTransition } from "./PageTransition";
-import { useLenis } from "@/hooks/useLenis";
 
+/**
+ * Layout (Navbar, Footer, Lenis, PageTransition) now lives in __root.tsx
+ * so it persists across route changes — required for cinematic transitions.
+ * SiteShell remains a passthrough for backwards compatibility with existing
+ * route files.
+ */
 export function SiteShell({ children }: { children: ReactNode }) {
-  useLenis();
-  return (
-    <div className="min-h-screen bg-background text-foreground antialiased">
-      <Navbar />
-      <main className="relative">
-        <PageTransition>{children}</PageTransition>
-      </main>
-      <Footer />
-    </div>
-  );
+  return <>{children}</>;
 }
