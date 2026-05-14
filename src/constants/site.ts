@@ -28,6 +28,7 @@ export const SERVICES = [
     number: "01",
     title: "Web Development",
     short: "Cinematic, performance-first websites built to convert.",
+    image: "/Service/webdevelopment.png",
     description:
       "From immersive marketing sites to complex platforms — engineered with Next-gen stacks, motion architecture, and obsessive attention to detail.",
     capabilities: [
@@ -43,6 +44,7 @@ export const SERVICES = [
     number: "02",
     title: "AI Automation",
     short: "Intelligent systems that remove friction from your business.",
+    image: "/Service/AIautomation.png",
     description:
       "Custom AI agents, retrieval pipelines, and automation flows that integrate with the tools you already use — and quietly run your operations 24/7.",
     capabilities: [
@@ -58,6 +60,7 @@ export const SERVICES = [
     number: "03",
     title: "App Development",
     short: "Native-feel mobile experiences that earn screen time.",
+    image: "/Service/Appdevelopment.png",
     description:
       "Cross-platform apps with the polish of native, the speed of modern tooling, and the design language of the products people actually love.",
     capabilities: [
@@ -73,6 +76,7 @@ export const SERVICES = [
     number: "04",
     title: "Social Media Management",
     short: "Editorial-grade content systems for modern brands.",
+    image: "/Service/SocialMedia.png",
     description:
       "Strategy, art direction, and production that turns scattered posts into a recognizable brand voice — and a compounding audience.",
     capabilities: [
@@ -146,6 +150,7 @@ export const TEAM = [
     name: "Aarav Mehta",
     role: "Founder · Creative Direction",
     bio: "Obsessed with the intersection of cinema, software, and brand systems.",
+    image: "/Team/WhatsApp Image 2026-05-06 at 22.25.49.jpeg",
     linkedin: "https://linkedin.com",
     initials: "AM",
   },
@@ -153,6 +158,7 @@ export const TEAM = [
     name: "Maya Okafor",
     role: "Head of Engineering",
     bio: "Ships scalable, motion-rich products. Previously at high-growth startups.",
+    image: "/Team/WhatsApp Image 2026-05-06 at 22.06.22.jpeg",
     linkedin: "https://linkedin.com",
     initials: "MO",
   },
@@ -160,6 +166,7 @@ export const TEAM = [
     name: "Lukas Reiner",
     role: "Design Director",
     bio: "Editorial design background. Believes typography is a storytelling weapon.",
+    image: "/Team/WhatsApp Image 2026-05-06 at 22.30.42.jpeg",
     linkedin: "https://linkedin.com",
     initials: "LR",
   },
@@ -167,6 +174,7 @@ export const TEAM = [
     name: "Sana Iqbal",
     role: "AI & Automation Lead",
     bio: "Builds the invisible systems that run quietly behind great products.",
+    image: "/Team/WhatsApp Image 2026-05-06 at 22.56.11.jpeg",
     linkedin: "https://linkedin.com",
     initials: "SI",
   },

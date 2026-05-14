@@ -150,11 +150,19 @@ function About() {
               >
                 <div className="aspect-[4/5] relative bg-mesh overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-foreground/5 to-electric/20" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-display text-[10rem] text-foreground/10 group-hover:text-electric/20 transition-colors">
-                      {m.initials}
-                    </span>
-                  </div>
+                  {m.image ? (
+                    <img
+                      src={m.image}
+                      alt={m.name}
+                      className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="text-display text-[10rem] text-foreground/10 group-hover:text-electric/20 transition-colors">
+                        {m.initials}
+                      </span>
+                    </div>
+                  )}
                   <div className="absolute top-4 right-4 h-10 w-10 rounded-full glass flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <Linkedin className="h-4 w-4 text-electric" />
                   </div>

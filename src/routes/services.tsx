@@ -60,14 +60,14 @@ function Services() {
               className="group relative grid lg:grid-cols-12 gap-8 rounded-3xl border border-border p-8 lg:p-12 hover:border-electric/40 hover:shadow-glow transition-all overflow-hidden"
             >
               <div className="absolute -top-32 -right-32 h-64 w-64 rounded-full bg-electric/0 group-hover:bg-electric/20 blur-3xl transition-all duration-700" />
-              <div className="lg:col-span-2">
+              <div className="lg:col-span-1">
                 <span className="text-display text-electric text-5xl">{s.number}</span>
               </div>
-              <div className="lg:col-span-5">
+              <div className="lg:col-span-4">
                 <h2 className="text-display text-4xl lg:text-5xl">{s.title}</h2>
                 <p className="mt-4 text-muted-foreground leading-relaxed">{s.description}</p>
               </div>
-              <div className="lg:col-span-5">
+              <div className="lg:col-span-4">
                 <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">Capabilities</p>
                 <ul className="space-y-2.5">
                   {s.capabilities.map((c) => (
@@ -77,6 +77,16 @@ function Services() {
                     </li>
                   ))}
                 </ul>
+              </div>
+              <div className="lg:col-span-3 relative h-48 lg:h-full min-h-[200px] rounded-2xl overflow-hidden bg-mesh border border-border/50">
+                {s.image && (
+                  <img
+                    src={s.image}
+                    alt={s.title}
+                    className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
               </div>
             </motion.article>
           ))}
